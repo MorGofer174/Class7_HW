@@ -14,11 +14,11 @@ public class Singleton {
     }
 
     //adds Text to file
-    public static void addText (String text) throws IOException {
-        File log =new File("C:\\Users\\MorG\\Desktop\\Log.txt");
-        BufferedWriter writer = new BufferedWriter(new FileWriter(log));
+    public void addText (String text) throws IOException {
 
-        writer.write(text);
+        FileWriter writer = new FileWriter("C:\\Users\\MorG\\Desktop\\Log.txt",true);
+
+        writer.write("\n"+text);
         writer.close();
 
     }}

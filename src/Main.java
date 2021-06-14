@@ -7,12 +7,25 @@ public class Main {
 
         Scanner user = new Scanner(System.in);
         System.out.println("please enter your name");
+        String userName = user.nextLine();
+        x.addText(userName);
 
-        x.addText(user.nextLine());
 
         System.out.println("please enter your age");
-        Singleton.addText(user.nextLine());
+        int age = user.nextInt();
+        x.addText(String.valueOf(age));
 
-        x.addText(user.nextLine());
+
+        System.out.println("please enter your address");
+        String userAddress = user.nextLine();
+        x.addText(userAddress);
+
+
+        System.out.println("please enter your phone number");
+        String userPhoneNum = user.nextLine();
+        x.addText(userPhoneNum);
+
+        user.close();
+
     }
 }
