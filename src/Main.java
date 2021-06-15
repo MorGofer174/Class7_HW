@@ -8,16 +8,17 @@ public class Main {
 
 //new scanner + enter name
         Scanner user = new Scanner(System.in);
-        boolean h = true;
-        while (h == true){
+        boolean isValid = false;
+        while (!isValid){
              System.out.println("please enter your name");
              String userName = user.nextLine();
-             x.addText(userName);
-             Alpha S = new Alpha();
-        if (S.ifAlpha(userName) == false){
+            Alpha S = new Alpha();
+            if (S.ifAlpha(userName) == true) {
+                x.addText(userName);
+                isValid = true;
+            }else {
             System.out.println("please try again");
-        user.next();
-        continue;}
+                continue;}
 
         }
 
